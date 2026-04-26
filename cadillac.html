@@ -35,7 +35,7 @@ nav a:hover{
     color:gold;
 }
 
-/* Hero */
+
 .hero{
     height:100vh;
     background:url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
@@ -73,7 +73,6 @@ button{
     margin-top:15px;
 }
 
-/* Cars */
 .cars{
     display:flex;
     flex-wrap:wrap;
@@ -100,13 +99,11 @@ button{
     object-fit:cover;
 }
 
-/* Parallax */
 .parallax{
     height:400px;
     background:url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
 }
 
-/* Contact */
 .contact{
     padding:50px;
     text-align:center;
@@ -118,18 +115,34 @@ input,textarea{
     margin:10px;
     padding:10px;
 }
-
-/* Footer */
 footer{
     text-align:center;
     padding:20px;
     background:#000;
 }
 
-/* Responsive */
 @media(max-width:768px){
     header{flex-direction:column}
     .hero{height:80vh}
+}
+@media(max-width:768px){
+    header{flex-direction:column}
+    .hero{height:80vh}
+}
+
+/* 🌙 Dark / Light Mode */
+body[data-theme="light"] {
+    background: #fff;
+    color: #000;
+}
+
+body[data-theme="light"] nav a {
+    color: #000;
+}
+
+body[data-theme="light"] .card {
+    background: #eee;
+    color: #000;
 }
 </style>
 
@@ -140,11 +153,15 @@ footer{
 
 <header>
     <h1>CADILLAC</h1>
+
+    <!-- زرار الثيم -->
+    <button id="theme-btn">🌙 Dark Mode</button>
+
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#cars">Models</a></li>
-            <a href="contact us.html">Contact</a>
+            <li><a href="contact us.html">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -185,9 +202,32 @@ footer{
 <footer>
     <p>© 2026 Cadillac Ultra</p>
 </footer>
+<script>
+const btn = document.getElementById('theme-btn');
+const body = document.body;
 
+const savedTheme = localStorage.getItem('theme');
 
+if (savedTheme === 'light') {
+    body.setAttribute('data-theme', 'light');
+    btn.innerText = '☀️ Light Mode';
+}
+
+btn.addEventListener('click', function () {
+    const currentTheme = body.getAttribute('data-theme');
+
+    if (currentTheme === 'light') {
+        body.removeAttribute('data-theme');
+        btn.innerText = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        body.setAttribute('data-theme', 'light');
+        btn.innerText = '☀️ Light Mode';
+        localStorage.setItem('theme', 'light');
+    }
+});
 </script>
+
 
 </body>
 </html>
