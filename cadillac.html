@@ -1,31 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Luxury Cars Agency </title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="here you can buy comfort" />
-    <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadillac Ultra Luxury</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial;
+    background:#000000;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+header{
+display:flex;
+justify-content:space-between;
+padding:20px;    
+}
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+/* Hero */
+.hero{
+    height:100vh;
+    background:url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero h2{
+    font-size:clamp(30px,6vw,60px);
+    color:gold;
+    z-index:1;
+}
+
+.hero p{
+    z-index:1;
+    color:#ccc;
+}
+
+button{
+    z-index:1;
+    padding:10px 20px;
+    background:gold;
+    border:none;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+/* Cars */
+.cars{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:60px 20px;
+}
+
+.card{
+    width:280px;
+    background:#111;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+/* Parallax */
+.parallax{
+    height:400px;
+    background:url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
+}
+
+/* Contact */
+.contact{
+    padding:50px;
+    text-align:center;
+}
+
+input,textarea{
+    width:90%;
+    max-width:400px;
+    margin:10px;
+    padding:10px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    header{flex-direction:column}
+    .hero{height:80vh}
+}
+</style>
+
 </head>
-<body class="1">
-    <header> 
-        <h1> CADILLAC </h1>
-        <img src="photos//photo_2026-04-23_11-23-17.jpg" class="logo">
-        <nav> 
-            <ul>
-                <li><a href="index.html" >HOME</a></li>
-                <li><a href="mercedes.html" > MERCEDES </a></li>
-                <li><a href="BMW.html" > BMW </a></li>
-                <li><a href="porshe.html" > PORSCHE </a> </li>
-                <li><a href="cadillac.html" > CADILLAC </a> </li>
-                <li><a href="Rolls royce.html"> ROLLS ROYCE </a> </li>
-                <li><a href="Bugatti.html" > BUGATTI </a></li>
-                <li><a href="contact us.html" > CONTACT US </a></li>
-            </ul>
-        </nav>
-    </header>
- <footer>
-        <p>2026 luxury cars agency all rights resesrved </p>
-    </footer>
-</body>    
+<body>
+
+<div class="loader">CADILLAC</div>
+
+<header>
+    <h1>CADILLAC</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#cars">Models</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="overlay"></div>
+    <h2>Cadillac Experience</h2>
+    <p>Power • Luxury • Legacy</p>
+    <button onclick="scrollToCars()">Explore</button>
+</section>
+
+<section id="cars" class="cars">
+
+    <div class="card">
+        <img src="https://en.arabgt.com/wp-content/uploads/2024/11/2025-cadillac-escalade-13-1536x1026.jpg">
+        <h3>Escalade</h3>
+        <p>$2000000</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.7pZFeHp7m8mz5KwHvqH_ogHaEK?pid=Api&h=220&P=0">
+        <h3>CT5</h3>
+        <p>$3000000</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="card">
+        <img src="https://ye-voice.com/user_images/news/18-03-20-783950243.jpg">
+        <h3>XT6</h3>
+        <p>$4000000</p>
+        <button>Buy</button>
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Cadillac Ultra</p>
+</footer>
+
+
+</script>
+
+</body>
 </html>
