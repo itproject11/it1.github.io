@@ -6,10 +6,45 @@
     <meta name="description" content="here you can buy comfort" />
     <link rel="stylesheet" href="style.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+     :root {
+            --bg-image: url('photos/photo_2026-04-23_11-04-12.jpg');
+            --overlay-color: rgba(26, 26, 26, 0.85); 
+            --main-text: #ffffff;
+            --accent-color: #d4af37;
+            --header-bg: rgba(0, 0, 0, 0.9);
+            --input-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        [data-theme="light"] {
+            background-image: url(photos/photo_2026-04-23_11-04-12.jpg); 
+            --overlay-color: rgba(245, 245, 245, 0.95); 
+            --main-text: #222222;
+            --accent-color: #005f73; 
+            --header-bg: #ffffff;
+            --input-bg: #ffffff;
+            background-color: #f0f2f5;
+        }
+
+        body {
+            background-image: var(--bg-image);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--main-text);
+            margin: 0;
+            padding: 0;
+            transition: all 0.5s ease; 
+        }
+
+     
+     </style>
 </head>
 <body>
     <header> 
         <h1> HERE YOU CAN BUY COMFORT</h1>
+        <button id="theme-btn">🌙 Switch Theme</button>
         <nav> 
             <ul>
                 <li><a href="index.html" >HOME</a></li>
@@ -23,15 +58,76 @@
             </ul>
         </nav>
     </header>
- <main>
+ <main id="sec1">
+    <section id="welcome text">
     <p>Where elegance meets performance We provide a curated collection of the world's most prestigious automotive masterpieces, Your journey toward ultimate luxury starts here</p>
-    start engine:<br>
+    </section>
+    <section id="audio">
+    <span> start engine </span><br><br>
     <audio controls>
             <source src="photos/freesound_community-ford-gt-engine-70457.mp4" type="audio/mp4">
     </audio>
+    </section>
+        <section id="search-cars" class="content-section">
+            <h2>SEARCH FOR AVAILABLE CARS</h2>
+            <form class="search-form">
+                <select name="brand">
+                    <option value="">Select Brand</option>
+                    <option value="mercedes">MERCEDES</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="cadillac">CADILLAC</option>
+                    <option value="Rolls Royce">Rolls Royce</option>
+                    <option value="BUGATTI">BUGATTI</option>
+                </select>
+                <input type="number" placeholder="Max Price (USD$)">
+                <button type="submit" class="btn-luxury">SEARCH</button>
+            </form>
+        </section>
+    <section id="book-car" class="content-section">
+            <h2>BOOK YOUR CAR</h2>
+            <form class="booking-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <select name="service">
+                    <option value="purchase">Direct Purchase</option>
+                    <option value="test-drive">Book a Test Drive</option>
+                </select>
+                <button type="submit" class="btn-luxury">CONFIRM BOOKING</button>
+            </form>
+        </section>    
  </main>   
-    <footer>
-        <p>2026 luxury cars agency all rights resesrved </p>
+    <footer class="foot1">
+        <p><p>&copy; 2026 Luxury Cars Agency. All Rights Reserved. </p>
     </footer>
+<script>
+    const btn = document.getElementById('theme-btn');
+    const body = document.body;
+
+    // 1. أول ما الصفحة تحمل: شوف هل المستخدم اختار "light" قبل كدة؟
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'light') {
+        body.setAttribute('data-theme', 'light');
+        btn.innerText = "☀️ Light Mode";
+    }
+
+    // 2. عند الضغط على الزرار: بدل الثيم واحفظ الاختيار
+    btn.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        
+        if (currentTheme === 'light') {
+            // حول للوضع المظلم
+            body.removeAttribute('data-theme');
+            btn.innerText = "🌙 Dark Mode";
+            localStorage.setItem('theme', 'dark'); // احفظ "dark"
+        } else {
+            // حول للوضع الفاتح
+            body.setAttribute('data-theme', 'light');
+            btn.innerText = "☀️ Light Mode";
+            localStorage.setItem('theme', 'light'); // احفظ "light"
+        }
+    });
+</script>
 </body>
 </html>
