@@ -1,155 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
+ <link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadillac Ultra Luxury</title>
+<title>luxury cars Agency</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-    font-family:Arial;
-    background:#000000;
-    color:#fff;
-    overflow-x:hidden;
+    <style>
+        :root {
+            --bg-color: #000000;
+            --main-text: #ffffff;
+            --accent-color: #d4af37; 
+            --card-bg: #111111;
+            --header-bg: rgba(0, 0, 0, 0.9);
+            --overlay: rgba(0, 0, 0, 0.7);
+        }
 
-}
-header{
-display:flex;
-justify-content:space-between;
-padding:20px;    
-}
-nav ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
-}
+        [data-theme="light"] {
+            --bg-color: #ffffff;
+            --main-text: #222222;
+            --accent-color: #005f73; 
+            --card-bg: #f8f9fa;
+            --header-bg: #ffffff;
+            --overlay: rgba(255, 255, 255, 0.4);
+        }
 
-nav a{
-    color:#fff;
-    text-decoration:none;
-    transition:.3s;
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-nav a:hover{
-    color:gold;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--main-text);
+            overflow-x: hidden;
+            transition: all 0.5s ease;
+        }
 
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--header-bg);
+            border-bottom: 2px solid var(--accent-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.5s;
+        }
 
-.hero{
-    height:100vh;
-    background:url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-}
+        header h1 {
+            color: var(--accent-color);
+            letter-spacing: 3px;
+        }
 
-.overlay{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-}
+        
+        #theme-btn {
+            padding: 8px 16px;
+            background: var(--accent-color);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-.hero h2{
-    font-size:clamp(30px,6vw,60px);
-    color:gold;
-    z-index:1;
-}
+        .hero {
+            height: 80vh;
+            background: url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
 
-.hero p{
-    z-index:1;
-    color:#ccc;
-}
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay);
+        }
 
-button{
-    z-index:1;
-    padding:10px 20px;
-    background:gold;
-    border:none;
-    cursor:pointer;
-    margin-top:15px;
-}
+        .hero h2 {
+            font-size: clamp(40px, 8vw, 80px);
+            color: var(--accent-color);
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
 
-.cars{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
-    padding:60px 20px;
-}
+        .hero p { z-index: 1; font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 20px; }
 
-.card{
-    width:280px;
-    background:#111;
-    border-radius:15px;
-    overflow:hidden;
-    transition:.4s;
-}
+        .cars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 80px 20px;
+        }
 
-.card:hover{
-    transform:scale(1.05);
-}
+        .card {
+            width: 300px;
+            background: var(--card-bg);
+            border: 1px solid var(--accent-color);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.4s;
+            text-align: center;
+            padding-bottom: 20px;
+        }
 
-.card img{
-    width:100%;
-    height:160px;
-    object-fit:cover;
-}
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-.parallax{
-    height:400px;
-    background:url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
-}
+        .card img { width: 100%; height: 180px; object-fit: cover; }
 
-.contact{
-    padding:50px;
-    text-align:center;
-}
+        .card h3 { margin: 15px 0; color: var(--accent-color); }
 
-input,textarea{
-    width:90%;
-    max-width:400px;
-    margin:10px;
-    padding:10px;
-}
-footer{
-    text-align:center;
-    padding:20px;
-    background:#000;
-}
+        .buybutton
+        {
+            padding: 8px 20px;
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-@media(max-width:768px){
-    header{flex-direction:column}
-    .hero{height:80vh}
-}
-@media(max-width:768px){
-    header{flex-direction:column}
-    .hero{height:80vh}
-}
+        .buybutton:hover{ background: var(--accent-color); color: #fff; }
 
-/* 🌙 Dark / Light Mode */
-body[data-theme="light"] {
-    background: #fff;
-    color: #000;
-}
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--accent-color);
+            opacity: 0.7;
+        }
 
-body[data-theme="light"] nav a {
-    color: #000;
-}
-
-body[data-theme="light"] .card {
-    background: #eee;
-    color: #000;
-}
-</style>
-
+        @media(max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav ul { gap: 10px; }
+        }
+    </style>
 </head>
 <body>
-
-<div class="loader">CADILLAC</div>
 
 <header>
     <h1>CADILLAC</h1>
@@ -170,7 +163,6 @@ body[data-theme="light"] .card {
     <div class="overlay"></div>
     <h2>Cadillac Experience</h2>
     <p>Power • Luxury • Legacy</p>
-    <button onclick="scrollToCars()">Explore</button>
 </section>
 
 <section id="cars" class="cars">
@@ -179,30 +171,28 @@ body[data-theme="light"] .card {
         <img src="https://en.arabgt.com/wp-content/uploads/2024/11/2025-cadillac-escalade-13-1536x1026.jpg">
         <h3>Escalade</h3>
         <p>$2000000</p>
-        <button>Buy</button>
+        <button class="buybutton">Buy</button>
     </div>
 
     <div class="card">
         <img src="https://tse4.mm.bing.net/th/id/OIP.7pZFeHp7m8mz5KwHvqH_ogHaEK?pid=Api&h=220&P=0">
         <h3>CT5</h3>
         <p>$3000000</p>
-        <button>Buy</button>
+        <button class="buybutton">Buy</button>
     </div>
 
     <div class="card">
         <img src="https://ye-voice.com/user_images/news/18-03-20-783950243.jpg">
         <h3>XT6</h3>
         <p>$4000000</p>
-        <button>Buy</button>
+        <button class="buybutton">Buy</button>
     </div>
 
 </section>
-
-
 <footer>
-    <p>© 2026 Cadillac Ultra</p>
+    <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
 </footer>
-<script>
+    <script>
 const btn = document.getElementById('theme-btn');
 const body = document.body;
 
@@ -226,8 +216,6 @@ btn.addEventListener('click', function () {
         localStorage.setItem('theme', 'light');
     }
 });
-</script>
-
-
+    </script>
 </body>
 </html>
