@@ -1,133 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Luxury Cars Agency </title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="here you can buy comfort" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Cars Agency - Here you can buy comfort">
+    <title>Luxury Cars Agency</title>
     <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-     :root {
-            --bg-image: url('photos/photo_2026-04-23_11-04-12.jpg');
-            --overlay-color: rgba(26, 26, 26, 0.85); 
-            --main-text: #ffffff;
-            --accent-color: #d4af37;
-            --header-bg: rgba(0, 0, 0, 0.9);
-            --input-bg: rgba(255, 255, 255, 0.05);
-        }
-
-        [data-theme="light"] {
-            background-image: url(photos/photo_2026-04-23_11-04-12.jpg); 
-            --overlay-color: rgba(245, 245, 245, 0.95); 
-            --main-text: #222222;
-            --accent-color: #005f73; 
-            --header-bg: #ffffff;
-            --input-bg: #ffffff;
-            background-color: #f0f2f5;
-        }
-
-        body {
-            background-image: var(--bg-image);
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--main-text);
-            margin: 0;
-            padding: 0;
-            transition: all 0.5s ease; 
-        }
-
-     
-     </style>
 </head>
-<body>
-    <header> 
-        <h1> HERE YOU CAN BUY COMFORT</h1>
-        <button id="theme-btn">🌙 Switch Theme</button>
-        <nav> 
+<body  class="index-body">
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header">
+        <h1 id="site-logo">LUXURY CARS AGENCY</h1>
+
+        <nav id="main-nav">
             <ul>
-                <li><a href="index.html" >HOME</a></li>
-                <li><a href="mercedes.html" > MERCEDES </a></li>
-                <li><a href="BMW.html" > BMW </a></li>
-                <li><a href="porshe.html" > PORSCHE </a> </li>
-                <li><a href="cadillac.html" > CADILLAC </a> </li>
-                <li><a href="Rolls royce.html"> ROLLS ROYCE </a> </li>
-                <li><a href="Bugatti.html" > BUGATTI </a></li>
-                <li><a href="contact us.html" > CONTACT US </a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="mercedes.html">MERCEDES</a></li>
+                <li><a href="BMW.html">BMW</a></li>
+                <li><a href="porshe.html">PORSCHE</a></li>
+                <li><a href="cadillac.html">CADILLAC</a></li>
+                <li><a href="Rolls royce.html">ROLLS ROYCE</a></li>
+                <li><a href="Bugatti.html">BUGATTI</a></li>
+                <li><a href="contact us.html">CONTACT US</a></li>
             </ul>
         </nav>
+
+        <!-- Theme Toggle - Top Right -->
+        <button id="theme-btn">🌙 Dark Mode</button>
     </header>
- <main id="sec1">
-    <section id="welcome text">
-    <p>Where elegance meets performance We provide a curated collection of the world's most prestigious automotive masterpieces, Your journey toward ultimate luxury starts here</p>
-    </section>
-    <section id="audio">
-    <span> start engine </span><br><br>
-    <audio controls>
-            <source src="photos/freesound_community-ford-gt-engine-70457.mp4" type="audio/mp4">
-    </audio>
-    </section>
-        <section id="search-cars" class="content-section">
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- Welcome Section -->
+        <section id="welcome-section" class="content-section">
+            <h2>HERE YOU CAN BUY COMFORT</h2>
+            <p>Where elegance meets performance. We provide a curated collection of the world's most prestigious automotive masterpieces. Your journey toward ultimate luxury starts here.</p>
+        </section>
+
+        <!-- Audio Section -->
+        <section id="audio-section" class="content-section">
+            <span>START ENGINE</span>
+            <br><br>
+            <audio id="my-audio" controls style="width: 300px; border-radius: 30px;">
+                <source src="photos/freesound_community-ford-gt-engine-70457.mp4" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Search Section -->
+        <section id="search-section" class="content-section">
             <h2>SEARCH FOR AVAILABLE CARS</h2>
             <form class="search-form">
                 <select name="brand">
                     <option value="">Select Brand</option>
                     <option value="mercedes">MERCEDES</option>
                     <option value="bmw">BMW</option>
-                    <option value="porsche">Porsche</option>
+                    <option value="porsche">PORSCHE</option>
                     <option value="cadillac">CADILLAC</option>
-                    <option value="Rolls Royce">Rolls Royce</option>
-                    <option value="BUGATTI">BUGATTI</option>
+                    <option value="rollsroyce">ROLLS ROYCE</option>
+                    <option value="bugatti">BUGATTI</option>
                 </select>
-                <input type="number" placeholder="Max Price (USD$)">
+                <input type="number" name="max-price" placeholder="Max Price (USD $)">
                 <button type="submit" class="btn-luxury">SEARCH</button>
             </form>
         </section>
-    <section id="book-car" class="content-section">
+
+        <!-- Booking Section -->
+        <section id="booking-section" class="content-section">
             <h2>BOOK YOUR CAR</h2>
             <form class="booking-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
                 <select name="service">
                     <option value="purchase">Direct Purchase</option>
                     <option value="test-drive">Book a Test Drive</option>
                 </select>
                 <button type="submit" class="btn-luxury">CONFIRM BOOKING</button>
             </form>
-        </section>    
- </main>   
-    <footer class="foot1">
-        <p><p>&copy; 2026 Luxury Cars Agency. All Rights Reserved. </p>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="main-footer">
+        <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
     </footer>
-<script>
-    const btn = document.getElementById('theme-btn');
-    const body = document.body;
 
-    // 1. أول ما الصفحة تحمل: شوف هل المستخدم اختار "light" قبل كدة؟
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme === 'light') {
-        body.setAttribute('data-theme', 'light');
-        btn.innerText = "☀️ Light Mode";
-    }
-
-    // 2. عند الضغط على الزرار: بدل الثيم واحفظ الاختيار
-    btn.addEventListener('click', () => {
-        const currentTheme = body.getAttribute('data-theme');
-        
-        if (currentTheme === 'light') {
-            // حول للوضع المظلم
-            body.removeAttribute('data-theme');
-            btn.innerText = "🌙 Dark Mode";
-            localStorage.setItem('theme', 'dark'); // احفظ "dark"
-        } else {
-            // حول للوضع الفاتح
-            body.setAttribute('data-theme', 'light');
-            btn.innerText = "☀️ Light Mode";
-            localStorage.setItem('theme', 'light'); // احفظ "light"
-        }
-    });
-</script>
+    <script src="Java Script.js"></script>
 </body>
 </html>

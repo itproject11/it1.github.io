@@ -1,221 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
- <link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>luxury cars Agency</title>
-
-    <style>
-        :root {
-            --bg-color: #000000;
-            --main-text: #ffffff;
-            --accent-color: #d4af37; 
-            --card-bg: #111111;
-            --header-bg: rgba(0, 0, 0, 0.9);
-            --overlay: rgba(0, 0, 0, 0.7);
-        }
-
-        [data-theme="light"] {
-            --bg-color: #ffffff;
-            --main-text: #222222;
-            --accent-color: #005f73; 
-            --card-bg: #f8f9fa;
-            --header-bg: #ffffff;
-            --overlay: rgba(255, 255, 255, 0.4);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--main-text);
-            overflow-x: hidden;
-            transition: all 0.5s ease;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background-color: var(--header-bg);
-            border-bottom: 2px solid var(--accent-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: 0.5s;
-        }
-
-        header h1 {
-            color: var(--accent-color);
-            letter-spacing: 3px;
-        }
-
-        
-        #theme-btn {
-            padding: 8px 16px;
-            background: var(--accent-color);
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .hero {
-            height: 80vh;
-            background: url('https://seeklogo.com/images/C/cadillac-logo-F0AF75FA39-seeklogo.com.png') center/cover fixed;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: var(--overlay);
-        }
-
-        .hero h2 {
-            font-size: clamp(40px, 8vw, 80px);
-            color: var(--accent-color);
-            z-index: 1;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
-
-        .hero p { z-index: 1; font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 20px; }
-
-        .cars {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 80px 20px;
-        }
-
-        .card {
-            width: 300px;
-            background: var(--card-bg);
-            border: 1px solid var(--accent-color);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: 0.4s;
-            text-align: center;
-            padding-bottom: 20px;
-        }
-
-        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-        .card img { width: 100%; height: 180px; object-fit: cover; }
-
-        .card h3 { margin: 15px 0; color: var(--accent-color); }
-
-        .buybutton
-        {
-            padding: 8px 20px;
-            background: transparent;
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .buybutton:hover{ background: var(--accent-color); color: #fff; }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid var(--accent-color);
-            opacity: 0.7;
-        }
-
-        @media(max-width: 768px) {
-            header { flex-direction: column; gap: 15px; }
-            nav ul { gap: 10px; }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Cars Agency - Cadillac Collection">
+    <title>Cadillac | Luxury Cars Agency</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>CADILLAC</h1>
+    <!-- ===== HEADER ===== -->
+    <header id="main-header">
+        <h1 id="site-logo">CADILLAC</h1>
 
-    <!-- زرار الثيم -->
-    <button id="theme-btn">🌙 Dark Mode</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="mercedes.html">MERCEDES</a></li>
+                <li><a href="BMW.html">BMW</a></li>
+                <li><a href="porshe.html">PORSCHE</a></li>
+                <li><a href="cadillac.html">CADILLAC</a></li>
+                <li><a href="Rolls royce.html">ROLLS ROYCE</a></li>
+                <li><a href="Bugatti.html">BUGATTI</a></li>
+                <li><a href="contact us.html">CONTACT US</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#cars">Models</a></li>
-            <li><a href="contact us.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+        <!-- Theme Toggle - Top Right -->
+        <button id="theme-btn">🌙 Dark Mode</button>
+    </header>
 
-<section class="hero">
-    <div class="overlay"></div>
-    <h2>Cadillac Experience</h2>
-    <p>Power • Luxury • Legacy</p>
-</section>
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero-section" style="background-image: url('photos/2025-cadillac-ct5-v-102-67ec0be1525e2.avif');">
+        <div class="hero-overlay"></div>
+        <h2 class="hero-title">CADILLAC</h2>
+        <p class="hero-subtitle">Power • Luxury • Legacy</p>
+    </section>
 
-<section id="cars" class="cars">
+    <!-- ===== CARS GRID ===== -->
+    <section id="cars-section">
 
-    <div class="card">
-        <img src="https://en.arabgt.com/wp-content/uploads/2024/11/2025-cadillac-escalade-13-1536x1026.jpg">
-        <h3>Escalade</h3>
-        <p>$2000000</p>
-        <button class="buybutton">Buy</button>
-    </div>
+        <div class="car-card" id="card-cadillac-escalade">
+            <img class="car-image" src="https://en.arabgt.com/wp-content/uploads/2024/11/2025-cadillac-escalade-13-1536x1026.jpg" alt="Cadillac Escalade">
+            <h3 class="car-name">Escalade</h3>
+            <p class="car-price">$2,000,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
 
-    <div class="card">
-        <img src="https://tse4.mm.bing.net/th/id/OIP.7pZFeHp7m8mz5KwHvqH_ogHaEK?pid=Api&h=220&P=0">
-        <h3>CT5</h3>
-        <p>$3000000</p>
-        <button class="buybutton">Buy</button>
-    </div>
+        <div class="car-card" id="card-cadillac-ct5">
+            <img class="car-image" src="https://tse4.mm.bing.net/th/id/OIP.7pZFeHp7m8mz5KwHvqH_ogHaEK?pid=Api&h=220&P=0" alt="Cadillac CT5">
+            <h3 class="car-name">CT5</h3>
+            <p class="car-price">$3,000,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
 
-    <div class="card">
-        <img src="https://ye-voice.com/user_images/news/18-03-20-783950243.jpg">
-        <h3>XT6</h3>
-        <p>$4000000</p>
-        <button class="buybutton">Buy</button>
-    </div>
+        <div class="car-card" id="card-cadillac-xt6">
+            <img class="car-image" src="https://ye-voice.com/user_images/news/18-03-20-783950243.jpg" alt="Cadillac XT6">
+            <h3 class="car-name">XT6</h3>
+            <p class="car-price">$4,000,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
 
-</section>
-<footer>
-    <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
-</footer>
-    <script>
-const btn = document.getElementById('theme-btn');
-const body = document.body;
+    </section>
 
-const savedTheme = localStorage.getItem('theme');
+    <!-- ===== FOOTER ===== -->
+    <footer id="main-footer">
+        <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
+    </footer>
 
-if (savedTheme === 'light') {
-    body.setAttribute('data-theme', 'light');
-    btn.innerText = '☀️ Light Mode';
-}
-
-btn.addEventListener('click', function () {
-    const currentTheme = body.getAttribute('data-theme');
-
-    if (currentTheme === 'light') {
-        body.removeAttribute('data-theme');
-        btn.innerText = '🌙 Dark Mode';
-        localStorage.setItem('theme', 'dark');
-    } else {
-        body.setAttribute('data-theme', 'light');
-        btn.innerText = '☀️ Light Mode';
-        localStorage.setItem('theme', 'light');
-    }
-});
-    </script>
+    <script src="Java Script.js"></script>
 </body>
 </html>

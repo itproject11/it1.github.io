@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Luxury Cars Agency </title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="here you can buy comfort" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Cars Agency - Mercedes Collection">
+    <title>Mercedes | Luxury Cars Agency</title>
     <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="1">
-    <header> 
-        <h1> MERCEDES </h1>
-        <img src="photos/photo_2026-04-23_11-36-05.jpg" class="logo">
-        <nav> 
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header">
+        <h1 id="site-logo">MERCEDES</h1>
+
+        <nav id="main-nav">
             <ul>
-                 <li><a href="index.html" >HOME</a></li>
-                <li><a href="mercedes.html" > MERCEDES </a></li>
-                <li><a href="BMW.html" > BMW </a></li>
-                <li><a href="porshe.html" > PORSCHE </a> </li>
-                <li><a href="cadillac.html" > CADILLAC </a> </li>
-                <li><a href="Rolls royce.html"> ROLLS ROYCE </a> </li>
-                <li><a href="Bugatti.html" > BUGATTI </a></li>
-                <li><a href="contact us.html" > CONTACT US </a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="mercedes.html">MERCEDES</a></li>
+                <li><a href="BMW.html">BMW</a></li>
+                <li><a href="porshe.html">PORSCHE</a></li>
+                <li><a href="cadillac.html">CADILLAC</a></li>
+                <li><a href="Rolls royce.html">ROLLS ROYCE</a></li>
+                <li><a href="Bugatti.html">BUGATTI</a></li>
+                <li><a href="contact us.html">CONTACT US</a></li>
             </ul>
         </nav>
+
+        <!-- Theme Toggle - Top Right -->
+        <button id="theme-btn">🌙 Dark Mode</button>
     </header>
- <footer>
-        <p>2026 luxury cars agency all rights resesrved </p>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero-section" style="background-image: url('photos/mercedes\ maybach\ s\ class.jpg');">
+        <div class="hero-overlay"></div>
+        <h2 class="hero-title">MERCEDES</h2>
+        <p class="hero-subtitle">Elegance • Innovation • Excellence</p>
+    </section>
+
+    <!-- ===== CARS GRID ===== -->
+    <section id="cars-section">
+
+        <div class="car-card" id="card-mercedes-sclass">
+            <img class="car-image" src="photos/mercedes-s-class-2026-21.webp" alt="Mercedes S-Class">
+            <h3 class="car-name">Mercedes S-Class</h3>
+            <p class="car-price">$115,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+        <div class="car-card" id="card-mercedes-amg">
+            <img class="car-image" src="photos/mercedes amg 63 E.jpg" alt="Mercedes AMG GT">
+            <h3 class="car-name">Mercedes AMG GT</h3>
+            <p class="car-price">$165,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+        <div class="car-card" id="card-mercedes-gls">
+            <img class="car-image" src="photos/Mercedes-Benz-GLS.jpg" alt="Mercedes GLS">
+            <h3 class="car-name">Mercedes GLS</h3>
+            <p class="car-price">$105,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="main-footer">
+        <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
     </footer>
-</body>   
+
+    <script src="Java Script.js"></script>
+</body>
 </html>

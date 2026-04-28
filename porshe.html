@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Luxury Cars Agency </title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="here you can buy comfort" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Cars Agency - Porsche Collection">
+    <title>Porsche | Luxury Cars Agency</title>
     <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="1">
-    <header> 
-        <h1> PORSHE </h1>
-        <img src="photos/download (1).jpg" class="logo">
-        <nav> 
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header">
+        <h1 id="site-logo">PORSCHE</h1>
+
+        <nav id="main-nav">
             <ul>
-                 <li><a href="index.html" >HOME</a></li>
-                <li><a href="mercedes.html" > MERCEDES </a></li>
-                <li><a href="BMW.html" > BMW </a></li>
-                <li><a href="porshe.html" > PORSHE </a> </li>
-                <li><a href="cadillac.html" > CADILLAC </a> </li>
-                <li><a href="Rolls royce.html"> ROLLS ROYCE </a> </li>
-                <li><a href="Bugatti.html" > BUGATTI </a></li>
-                <li><a href="contact us.html" > CONTACT US </a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="mercedes.html">MERCEDES</a></li>
+                <li><a href="BMW.html">BMW</a></li>
+                <li><a href="porshe.html">PORSCHE</a></li>
+                <li><a href="cadillac.html">CADILLAC</a></li>
+                <li><a href="Rolls royce.html">ROLLS ROYCE</a></li>
+                <li><a href="Bugatti.html">BUGATTI</a></li>
+                <li><a href="contact us.html">CONTACT US</a></li>
             </ul>
         </nav>
+
+        <!-- Theme Toggle - Top Right -->
+        <button id="theme-btn">🌙 Dark Mode</button>
     </header>
- <footer>
-        <p>2026 luxury cars agency all rights resesrved </p>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero-section" style="background-image: url('photos/porsche\ cayenne.jpg');">
+        <div class="hero-overlay"></div>
+        <h2 class="hero-title">PORSCHE</h2>
+        <p class="hero-subtitle">Thrill • Craft • Legend</p>
+    </section>
+
+    <!-- ===== CARS GRID ===== -->
+    <section id="cars-section">
+
+        <div class="car-card" id="card-porsche-911">
+            <img class="car-image" src="photos/images (1).jpg" alt="Porsche 911">
+            <h3 class="car-name">Porsche 911 Turbo S</h3>
+            <p class="car-price">$230,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+        <div class="car-card" id="card-porsche-cayenne">
+            <img class="car-image" src="photos/porsche-cayenne.jpg" alt="Porsche Cayenne">
+            <h3 class="car-name">Porsche Cayenne Turbo</h3>
+            <p class="car-price">$185,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+        <div class="car-card" id="card-porsche-panamera">
+            <img class="car-image" src="photos/porsche panamera.jpg" alt="Porsche Panamera">
+            <h3 class="car-name">Porsche Panamera</h3>
+            <p class="car-price">$150,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="main-footer">
+        <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
     </footer>
+
+    <script src="Java Script.js"></script>
 </body>
 </html>

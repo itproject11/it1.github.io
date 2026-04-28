@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Luxury Cars Agency </title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="here you can buy comfort" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Cars Agency - Bugatti Collection">
+    <title>Bugatti | Luxury Cars Agency</title>
     <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="1">
-    <header> 
-        <h1> BUGGATI </h1>
-        <img src="photos//photo_2026-04-23_11-19-19.jpg" class="logo">
-        <nav> 
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header">
+        <h1 id="site-logo">BUGATTI</h1>
+
+        <nav id="main-nav">
             <ul>
-                <li><a href="index.html" >HOME</a></li>
-                <li><a href="mercedes.html" > MERCEDES </a></li>
-                <li><a href="BMW.html" > BMW </a></li>
-                <li><a href="porshe.html" > PORSCHE </a> </li>
-                <li><a href="cadillac.html" > CADILLAC </a> </li>
-                <li><a href="Rolls royce.html"> ROLLS ROYCE </a> </li>
-                <li><a href="Bugatti.html" > BUGATTI </a></li>
-                <li><a href="contact us.html" > CONTACT US </a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="mercedes.html">MERCEDES</a></li>
+                <li><a href="BMW.html">BMW</a></li>
+                <li><a href="porshe.html">PORSCHE</a></li>
+                <li><a href="cadillac.html">CADILLAC</a></li>
+                <li><a href="Rolls royce.html">ROLLS ROYCE</a></li>
+                <li><a href="Bugatti.html">BUGATTI</a></li>
+                <li><a href="contact us.html">CONTACT US</a></li>
             </ul>
         </nav>
+
+        <!-- Theme Toggle - Top Right -->
+        <button id="theme-btn">🌙 Dark Mode</button>
     </header>
- <footer>
-        <p>2026 luxury cars agency all rights resesrved </p>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero-section" style="background-image: url('photos/llllll.jpg');">
+        <div class="hero-overlay"></div>
+        <h2 class="hero-title">BUGATTI</h2>
+        <p class="hero-subtitle">Speed • Art • Obsession</p>
+    </section>
+
+    <!-- ===== CARS GRID ===== -->
+    <section id="cars-section">
+
+        <div class="car-card" id="card-bugatti-chiron">
+            <img class="car-image" src="photos/bugatti chiron.jpg" alt="Bugatti Chiron">
+            <h3 class="car-name">Bugatti Chiron</h3>
+            <p class="car-price">$3,000,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+        <div class="car-card" id="card-bugatti-veyron">
+            <img class="car-image" src="photos/2011-Bugatti-Veyron-Grand-Sport-L-Or-Blanc-005-1080.jpg" alt="Bugatti Veyron">
+            <h3 class="car-name">Bugatti Veyron</h3>
+            <p class="car-price">$1,700,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+        <div class="car-card" id="card-bugatti-tourbillon">
+            <img class="car-image" src="photos/bugatti tourbillon.jpg" alt="Bugatti Tourbillon">
+            <h3 class="car-name">Bugatti Tourbillon</h3>
+            <p class="car-price">$3,800,000</p>
+            <button class="btn-buy">Buy</button>
+        </div>
+
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="main-footer">
+        <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
     </footer>
+
+    <script src="Java Script.js"></script>
 </body>
 </html>

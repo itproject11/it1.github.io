@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Luxury Cars Agency </title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="here you can buy comfort" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Cars Agency - Contact Us">
+    <title>Contact Us | Luxury Cars Agency</title>
     <link rel="stylesheet" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
+
+    <style>
     body {
-            /* استخدمنا المتغيرات عشان تتغير تلقائياً */
             background-image: var(--bg-image, url('photos/photo_2026-04-23_11-04-12.jpg'));
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             transition: all 0.5s ease;
+            
         }
 
         main {
@@ -63,6 +64,7 @@
             background: var(--accent-color);
             color: #000; 
             font-weight: bold;
+            letter-spacing: 1px;
             cursor: pointer;
             width: 90%;
             padding: 15px;
@@ -75,82 +77,63 @@
         .btn-luxury:hover {
             background: var(--accent-color);
             color: var(--bg-color);
-            letter-spacing: 3px;
             transform: translateY(-3px);
         }
+    </style>
 
-        /* زر تبديل الثيم */
-        #theme-btn {
-            background: var(--accent-color);
-            color: #000;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-     </style>
 </head>
 <body>
-    <header> 
-        <h1> CONTACT US </h1>
-        <button id="theme-btn">🌙 Switch Theme</button>
-        <nav> 
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header">
+        <h1 id="site-logo">CONTACT US</h1>
+
+        <nav id="main-nav">
             <ul>
-                <li><a href="index.html" >HOME</a></li>
-                <li><a href="mercedes.html" > MERCEDES </a></li>
-                <li><a href="BMW.html" > BMW </a></li>
-                <li><a href="porshe.html" > PORSCHE </a> </li>
-                <li><a href="cadillac.html" > CADILLAC </a> </li>
-                <li><a href="Rolls royce.html"> ROLLS ROYCE </a> </li>
-                <li><a href="Bugatti.html" > BUGATTI </a></li>
-                <li><a href="contact us.html" > CONTACT US </a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="mercedes.html">MERCEDES</a></li>
+                <li><a href="BMW.html">BMW</a></li>
+                <li><a href="porshe.html">PORSCHE</a></li>
+                <li><a href="cadillac.html">CADILLAC</a></li>
+                <li><a href="Rolls royce.html">ROLLS ROYCE</a></li>
+                <li><a href="Bugatti.html">BUGATTI</a></li>
+                <li><a href="contact us.html">CONTACT US</a></li>
             </ul>
         </nav>
+
+        <!-- Theme Toggle - Top Right -->
+        <button id="theme-btn">🌙 Dark Mode</button>
     </header>
-<main>
-    <form>
-        <label> name : </label><br>
-            <input type="text" name="fullname" required><br><br>
-        <label> email : </label><br>
-            <input type="email" name="email" required><br><br>
-        <label> message : </label> <br>
-            <textarea rows="4" cols="20" placeholder="please enter your message" required></textarea><br><br>
-            <input type="submit" value="send message" class="btn-luxury"><br><br>
-    </form>
-</main>
-    <footer class="foot1">
-        <p><p>&copy; 2026 Luxury Cars Agency. All Rights Reserved. </p>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="contact-main">
+
+        <div id="contact-form-wrapper">
+
+            <form id="contact-form">
+
+                <label class="form-label" for="contact-name">Name</label>
+                <input class="form-input" type="text" id="contact-name" name="fullname" required>
+
+                <label class="form-label" for="contact-email">Email</label>
+                <input class="form-input" type="email" id="contact-email" name="email" required>
+
+                <label class="form-label" for="contact-message">Message</label>
+                <textarea class="form-textarea" id="contact-message" name="message" rows="5" placeholder="Please enter your message" required></textarea>
+
+                <button type="submit" class="btn-luxury">SEND MESSAGE</button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="main-footer">
+        <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
     </footer>
-<script>
-    const btn = document.getElementById('theme-btn');
-    const body = document.body;
 
-    // 1. أول ما الصفحة تحمل: شوف هل المستخدم اختار "light" قبل كدة؟
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme === 'light') {
-        body.setAttribute('data-theme', 'light');
-        btn.innerText = "☀️ Light Mode";
-    }
-
-    // 2. عند الضغط على الزرار: بدل الثيم واحفظ الاختيار
-    btn.addEventListener('click', () => {
-        const currentTheme = body.getAttribute('data-theme');
-        
-        if (currentTheme === 'light') {
-            // حول للوضع المظلم
-            body.removeAttribute('data-theme');
-            btn.innerText = "🌙 Dark Mode";
-            localStorage.setItem('theme', 'dark'); // احفظ "dark"
-        } else {
-            // حول للوضع الفاتح
-            body.setAttribute('data-theme', 'light');
-            btn.innerText = "☀️ Light Mode";
-            localStorage.setItem('theme', 'light'); // احفظ "light"
-        }
-    });
-</script>
+    <script src="Java Script.js"></script>
 </body>
 </html>
