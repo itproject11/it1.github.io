@@ -1,0 +1,91 @@
+/* ===========================
+   COMPARE PAGE STYLES
+   =========================== */
+
+.comparebody {
+    background-color: var(--bg-color);
+    /* عشان لو في خلفية صورة في الـ style.css ما تضايقناش في قراءة الجدول */
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Container الجدول عشان الـ Responsiveness */
+.content-section {
+    max-width: 95% !important; /* توسيع الحاوية شوية عشان الـ 6 عربيات */
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* ستايل الجدول الرئيسي */
+#comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--accent-color);
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* تنسيق الخلايا (الرأس والجسم) */
+#comparison-table th, 
+#comparison-table td {
+    padding: 15px 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* ستايل رأس الجدول (Thead) */
+#comparison-table thead th {
+    background-color: var(--header-bg);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+/* تمييز العمود الأول (الخاصية) */
+.feature-name {
+    background-color: rgba(212, 175, 55, 0.1); /* لون خفيف من الـ Accent */
+    color: var(--accent-color) !important;
+    font-weight: bold;
+    text-align: left !important;
+    padding-left: 20px !important;
+    width: 150px;
+}
+
+/* تأثير عند الوقوف على الصف (Hover) */
+#comparison-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* تمييز الخلايا عند الـ Hover عشان التركيز */
+#comparison-table tbody td:hover {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* ستايل تذييل الجدول (Tfoot) */
+#comparison-table tfoot td {
+    background-color: var(--header-bg);
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 12px;
+    padding: 15px;
+}
+
+/* --- Responsive Table (مهم جداً للموبايل) --- */
+@media (max-width: 992px) {
+    #comparison-table {
+        font-size: 12px; /* تصغير الخط في الشاشات المتوسطة */
+    }
+    
+    .feature-name {
+        width: 100px;
+        padding-left: 10px !important;
+    }
+}

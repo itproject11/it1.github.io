@@ -47,7 +47,20 @@ body {
     transition: all 0.4s ease;
     overflow-x: hidden;
 }
- 
+
+/* تعديل الـ Body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* يخلي الجسم دايماً واخد طول الشاشة */
+    margin: 0;
+}
+
+/* تعديل الـ Main */
+main {
+    flex: 1; /* دي أهم خاصية: بتخلي الـ main يمط وياخد كل المساحة الفاضية ويزق الفوتر لتحت */
+}
+
 /* ===========================
    HEADER
    =========================== */
@@ -199,7 +212,18 @@ body {
     color: var(--accent-color);
     font-size: 16px;
 }
- 
+
+/* ضيف ده تحت ستايل الـ .car-name */
+.car-card .car-description {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 0 15px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    height: 40px; /* توحيد الارتفاع عشان الكروت تبان صف واحد */
+    overflow: hidden;
+}
+
 .car-card .car-price {
     color: var(--text-secondary);
     margin-bottom: 12px;
@@ -355,3 +379,42 @@ body {
         width: 100%;
     }
 }
+
+/* الـ Layout الطبيعي (Dark Mode) مثلاً يكون Grid */
+#cars-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* العناصر جنب بعض */
+}
+
+/* --- التغيير اللي هيحصل لما تضغط الزرار (alt-layout) --- */
+/* مثلاً هنخلي العربيات تظهر تحت بعض بشكل طولي (List View) بدل (Grid View) */
+.alt-layout #cars-section {
+    flex-direction: column; 
+    align-items: center;
+}
+
+.alt-layout .car-card {
+    width: 80%; /* الكارت يكبر وياخد عرض الصفحة */
+    display: flex; /* يخلي الصورة جنب الكلام */
+    text-align: left;
+    align-items: center;
+    padding: 10px;
+}
+
+.alt-layout .car-image {
+    width: 300px; /* تصغير الصورة شوية في وضع القائمة */
+    height: 150px;
+    margin-right: 20px;
+}
+
+/* ممكن كمان نغير مكان الـ Navigation */
+.alt-layout #main-header {
+    flex-direction: column; /* المنيو تنزل تحت اللوجو */
+    height: auto;
+}
+
+.cfooter{margin-top:  70px;}
+
+
+#op{color:var(--accent-color) ;}
