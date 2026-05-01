@@ -102,17 +102,21 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+        /*الكود الخاص بالبحث عن العربيات*/
 
-// --- الجزء الرابع: كود البحث (Search) ---
-const searchForm = document.querySelector('.search-form');
+
 if (searchForm) {
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const brand = searchForm.querySelector('select[name="brand"]').value;
+        const maxPrice = searchForm.querySelector('input[type="number"]').value; // هنجيب السعر
+
         if (brand) {
-            window.location.href = brand + ".html";
+            // هنبعت السعر في اللينك كـ Parameter
+            window.location.href = `${brand}.html?maxPrice=${maxPrice}`;
         } else {
             alert("Please select a brand to search.");
         }
     });
 }
+
