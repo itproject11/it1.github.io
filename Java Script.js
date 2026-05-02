@@ -30,5 +30,3 @@ btn.addEventListener('click', function () {
         localStorage.setItem('theme', 'light');
     }
 });
-    const audio = document.getElementById('my-audio');
-    audio.volume = 0.8;
