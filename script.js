@@ -46,15 +46,15 @@ if (bookingForm && userName && userEmail) {
         event.preventDefault();
 
         // فحص الاسم
-        if (userName.value.trim().length < 5) {
-            alert("الرجاء إدخال الاسم الكامل (أكثر من 5 أحرف)");
+        if (userName.value.trim().length < 3) {
+             alert("please enter full name")
             userName.style.border = "2px solid red";
             return; 
         }
 
         // فحص الإيميل يدوياً
         if (!userEmail.value.includes("@") || !userEmail.value.includes(".")) {
-            alert("الرجاء إدخال بريد إلكتروني صحيح يحتوي على @ ونقطة");
+            alert("enter correct email that contains @");
             userEmail.style.border = "2px solid red";
             return;
         }
@@ -104,15 +104,34 @@ if (contactForm) {
 }
 
 // --- الجزء الرابع: كود البحث (Search) ---
-const searchForm = document.querySelector('.search-form');
+// استهداف فورم البحث عن طريق الـ ID اللي أنت ضفته "searchh"
+const searchForm = document.getElementById('searchh');
+
 if (searchForm) {
-    searchForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // منع الصفحة من الريفرش
+
+        // الحصول على الماركة المختارة من الـ select
         const brand = searchForm.querySelector('select[name="brand"]').value;
-        if (brand) {
-            window.location.href = brand + ".html";
+
+        if (brand === "") {
+            alert("Please select a brand first!");
         } else {
-            alert("Please select a brand to search.");
+            // توجيه المستخدم لصفحة الماركة بناءً على القيمة (Value)
+            // ملاحظة: تأكد أن أسماء الصفحات تطابق الـ values بالظبط
+            if (brand === "mercedes") {
+                window.location.href = "mercedes.html";
+            } else if (brand === "bmw") {
+                window.location.href = "BMW.html";
+            } else if (brand === "porsche") {
+                window.location.href = "porshe.html";
+            } else if (brand === "cadillac") {
+                window.location.href = "cadillac.html";
+            } else if (brand === "rollsroyce") {
+                window.location.href = "Rolls royce.html";
+            } else if (brand === "bugatti") {
+                window.location.href = "Bugatti.html";
+            }
         }
     });
 }
