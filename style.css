@@ -433,3 +433,12 @@ main {
 #op {
     color: var(--accent-color);
 }
+
+
+.hero-title {
+    text-shadow: 2px 2px 10px gold ;
+}
+ 
+.car-name {
+    font-style: italic;
+}

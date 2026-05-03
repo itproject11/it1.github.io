@@ -154,4 +154,8 @@ if (searchForm) {
     });
 }
 
+
+sessionStorage.setItem('lastsearch', brand);
+const lastsearch = sessionStorage.getItem('lastsearch');
+
 // >>>>>>> 2f5a994f757e383eb6be0380bf79eaf004229704
