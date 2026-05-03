@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,6 @@
 </head>
 <body  class="index-body">
 
-    <!-- ===== HEADER ===== -->
     <header id="main-header">
         <h1 id="site-logo">LUXURY CARS AGENCY</h1>
 
@@ -26,20 +25,15 @@
             </ul>
         </nav>
 
-        <!-- Theme Toggle - Top Right -->
         <button id="theme-btn">🌙 Dark Mode</button>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
     <main id="main-content">
-
-        <!-- Welcome Section -->
         <section id="welcome-section" class="content-section">
             <h2>HERE YOU CAN BUY COMFORT</h2>
             <p>Where elegance meets performance. We provide a curated collection of the world's most prestigious automotive masterpieces. Your journey toward ultimate luxury starts here.</p>
         </section>
 
-        <!-- Audio Section -->
         <section id="audio-section" class="content-section">
             <span>START ENGINE</span>
             <br><br>
@@ -49,7 +43,6 @@
             </audio>
         </section>
 
-        <!-- Search Section -->
         <section id="search-section" class="content-section">
             <h2>SEARCH FOR AVAILABLE CARS</h2>
             <form class="search-form" id="searchh">
@@ -67,13 +60,21 @@
             </form>
         </section>
 
-    <!-- Booking Section -->
+
 <section id="booking-section" class="content-section">
     <h2>BOOK YOUR CAR</h2>
     <form class="booking-form">
-        <!-- ضفنا id="name1" و id="email1" و id="service 1" -->
         <input type="text" id="name1" name="fullname" placeholder="Full Name" required>
         <input type="email" id="email1" name="email" placeholder="Email Address" required>
+        <select name="car model">
+              <option value="">Select Brand</option>
+                    <option value="mercedes">MERCEDES</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">PORSCHE</option>
+                    <option value="cadillac">CADILLAC</option>
+                    <option value="rollsroyce">ROLLS ROYCE</option>
+                    <option value="bugatti">BUGATTI</option>
+        </select>
         <select name="service" id="service 1">
             <option value="purchase">Direct Purchase</option>
             <option value="test-drive">Book a Test Drive</option>

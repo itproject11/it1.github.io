@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,10 +42,11 @@
             text-align: left; 
             padding-left: 5%;
         }
+
         input, textarea {
-            background: var(--input-bg);
-            color: var(--text-primary);
-            border: 1px solid var(--accent-color);
+            background: var(--input-bg, rgba(255, 255, 255, 0.05));
+            border: 1px solid var(--border-color, #444);
+            color: var(--main-text, #fff);
             padding: 12px;
             width: 90%;
             border-radius: 5px;
@@ -80,11 +81,9 @@
         }
     </style>
 
-
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
     <header id="main-header">
         <h1 id="site-logo">CONTACT US</h1>
 
@@ -101,11 +100,9 @@
             </ul>
         </nav>
 
-        <!-- Theme Toggle - Top Right -->
         <button id="theme-btn">🌙 Dark Mode</button>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
     <main id="contact-main">
 
         <div id="contact-form-wrapper">
@@ -129,7 +126,6 @@
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer id="main-footer" class="cfooter">
         <p>&copy; 2026 Luxury Cars Agency. All Rights Reserved.</p>
     </footer>
