@@ -1,8 +1,4 @@
-/* ============================================================
-   LUXURY CARS AGENCY - COMPLETE MASTER SCRIPT
-   ============================================================ */
 
-// --- الجزء الأول: الـ Theme & Layout Switcher (مهم جداً للدرجات) ---
 const themeBtn = document.getElementById('theme-btn');
 const body = document.body;
 
@@ -36,7 +32,6 @@ if (themeBtn) {
     });
 }
 
-// --- الجزء الثاني: كود الحجز (Booking Form) اللي إنت كتبته ---
 const bookingForm = document.querySelector('.booking-form');
 const userName = document.getElementById('name1');
 const userEmail = document.getElementById('email1');
@@ -45,14 +40,12 @@ if (bookingForm && userName && userEmail) {
     bookingForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // فحص الاسم
         if (userName.value.trim().length < 3) {
              alert("please enter full name")
             userName.style.border = "2px solid red";
             return; 
         }
 
-        // فحص الإيميل يدوياً
         if (!userEmail.value.includes("@") || !userEmail.value.includes(".")) {
             alert("enter correct email that contains @");
             userEmail.style.border = "2px solid red";
@@ -63,14 +56,11 @@ if (bookingForm && userName && userEmail) {
         userEmail.style.border = "none";
         
         alert("Booking confirmed for " + userName.value + ". We will contact you soon.");
-        
-        // Storage: Write
         localStorage.setItem('lastBookingName', userName.value);
         bookingForm.reset();
     });
 }
 
-// --- الجزء الثالث: كود التواصل (Contact Form) ---
 const contactForm = document.getElementById('contact-form');
 const contactName = document.getElementById('contact-name');
 const contactEmail = document.getElementById('contact-email');
@@ -103,22 +93,18 @@ if (contactForm) {
     });
 }
 
-// --- الجزء الرابع: كود البحث (Search) ---
-// استهداف فورم البحث عن طريق الـ ID اللي أنت ضفته "searchh"
+
 const searchForm = document.getElementById('searchh');
 
 if (searchForm) {
     searchForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // منع الصفحة من الريفرش
+        e.preventDefault(); 
 
-        // الحصول على الماركة المختارة من الـ select
         const brand = searchForm.querySelector('select[name="brand"]').value;
 
         if (brand === "") {
             alert("Please select a brand first!");
         } else {
-            // توجيه المستخدم لصفحة الماركة بناءً على القيمة (Value)
-            // ملاحظة: تأكد أن أسماء الصفحات تطابق الـ values بالظبط
             if (brand === "mercedes") {
                 window.location.href = "mercedes.html";
             } else if (brand === "bmw") {
