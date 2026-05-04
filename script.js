@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         body.setAttribute('data-theme', savedTheme);
         if (themeBtn) {
-            themeBtn.textContent = savedTheme === 'light' ? '☀️ Light Mode' : '🌙 Dark Mode';
+            themeBtn.textContent = savedTheme === 'light' ? ' Light Mode' : ' Dark Mode';
         }
     }
     if (savedLayout === 'true') {
@@ -21,10 +21,10 @@ if (themeBtn) {
     themeBtn.addEventListener('click', () => {
         if (body.getAttribute('data-theme') === 'light') {
             body.setAttribute('data-theme', 'dark');
-            themeBtn.textContent = '🌙 Dark Mode';
+            themeBtn.textContent = ' Dark Mode';
         } else {
             body.setAttribute('data-theme', 'light');
-            themeBtn.textContent = '☀️ Light Mode';
+            themeBtn.textContent = ' Light Mode';
         }
         body.classList.toggle('alt-layout');
         localStorage.setItem('theme', body.getAttribute('data-theme'));
